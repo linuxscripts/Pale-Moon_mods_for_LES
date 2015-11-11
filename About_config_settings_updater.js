@@ -60,7 +60,7 @@ user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.server", "");
 user_pref("toolkit.telemetry.archive.enabled", false);
-user_pref("datareporting.healthreport.uploadEnabled",    false);
+user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.healthreport.documentServerURI", "");
 user_pref("datareporting.healthreport.service.enabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
