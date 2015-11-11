@@ -14,10 +14,10 @@
 
 // ABOUT:PREFERENCES settings
 // Change start page to personal (offline) webpage
-user_pref("browser.startup.homepage", "file:///C:/Documents%20and%20Settings/");
+user_pref("browser.startup.homepage", "file:///home/*/up_and_downloads/Postinstallation.html");
 
 // Set download directory
-user_pref("browser.download.lastDir", "??/up_&_downloads");
+user_pref("browser.download.lastDir", "file:///home/*/up_and_downloads/");
 
 // Enable erasing of form data, cookies and password data on shutdown, keep rest in history though
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
