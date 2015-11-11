@@ -41,8 +41,8 @@ make
 make install
 
 #Copy the modified preferences file to the palemoon folder so it uses these modified settings rather than the standard settings, see https://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/
-cd ~/files_internet_speed_increase_scripts/
-cp Updated_about_config_settings.js /usr/local/
+cd ~/files_internet_speed_increase_scripts/palemoon_updated_settings/
+cp Updated_about_config_settings.js /usr/local/palemoon/defaults/pref/
 
 #Install Flash player; see https://helpx.adobe.com/flash-player/release-note/readme-flash-player-linux.html
 cd ~/files_internet_speed_increase_scripts/flashplayer11-2-202460-targz/
@@ -58,26 +58,26 @@ cp usr/share/pixmaps/* /usr/share/pixmaps/
 cp libflashplayer.so /usr/local/firefox/browser/extensions/
 
 #Delete non-SSL search engines and install SSL search engines in browser search bar; see http://kb.mozillazine.org/Search_Bar
-cd ~/usr/local/firefox/browser/searchplugins/
+cd ~/usr/local/palemoon/browser/searchplugins/
 rm *
 
-cd ~/files_internet_speed_increase_scripts/firefox_plugins/SSL search bars/
-cp duckduckgo__ssl_-20101029.xml /usr/local/firefox/browser/searchplugins/
-cp google_ssl-20111022.xml /usr/local/firefox/browser/searchplugins/
-cp ixquick__ssl_-20101029.xml /usr/local/firefox/browser/searchplugins/
+cd ~/files_internet_speed_increase_scripts/palemoon_plugins/SSL search bars/
+cp duckduckgo__ssl_-20101029.xml /usr/local/palemoon/browser/searchplugins/
+cp google_ssl-20111022.xml /usr/local/palemoon/browser/searchplugins/
+cp ixquick__ssl_-20101029.xml /usr/local/palemoon/browser/searchplugins/
 
-#Install Firefox plugins; see http://kb.mozillazine.org/Installing_extensions
-cd ~/files_internet_speed_increase_scripts/firefox_plugins/
-cp calomel_ssl_validation-0.75-fx.xpi /usr/local/firefox/browser/extensions/
-cp uBlock-0.9.1.0-an+fx.xpi /usr/local/firefox/browser/extensions/
-#cp disconnect-3.15.3-fx.xpi /usr/local/firefox/browser/extensions/
-cp https-everywhere-5.0.4.xpi /usr/local/firefox/browser/extensions/
-cp noscript-2.6.9.22.xpi /usr/local/firefox/browser/extensions/
-cp user_agent_overrider-0.2.5-fx.xpi /usr/local/firefox/browser/extensions/
+#Install Palemoon plugins; see http://kb.mozillazine.org/Installing_extensions
+cd ~/files_internet_speed_increase_scripts/palemoon_plugins/
+cp calomel_ssl_validation-0.75-fx.xpi /usr/local/palemoon/browser/extensions/
+cp uBlock-0.9.1.0-an+fx.xpi /usr/local/palemoon/browser/extensions/
+#cp disconnect-3.15.3-fx.xpi /usr/local/palemoon/browser/extensions/
+cp https-everywhere-5.0.4.xpi /usr/local/palemoon/browser/extensions/
+cp noscript-2.6.9.22.xpi /usr/local/palemoon/browser/extensions/
+cp user_agent_overrider-0.2.5-fx.xpi /usr/local/palemoon/browser/extensions/
 
 #Copy the Post-installation instructions html to the /home/<username>/up_and_downloads/ folder; note that the post-installation instructions html will also be your made your startpage by the updated files handling the Preferences and about:config in Firefox
 cd ~/files_other/
 cp Postinstallation.html /home/*/up_and_downloads/Postinstallation.html
 
-#Display messagebox that the Firefox browser needs to be restarted before changes take effect (see http://stackoverflow.com/questions/7035/how-to-show-a-message-box-from-a-bash-script-in-linux). Note that a standard kill9 hasn't been used since that doesn't allow to shut down any program cleanly, see https://www.reddit.com/r/linux/comments/1xvr25/linux_tip_dont_use_kill_9/
-notify-send "Restart the Firefox browser for changes to take effect"
+#Display messagebox that the Pale Moon browser needs to be restarted before changes take effect (see http://stackoverflow.com/questions/7035/how-to-show-a-message-box-from-a-bash-script-in-linux). Note that a standard kill9 hasn't been used since that doesn't allow to shut down any program cleanly, see https://www.reddit.com/r/linux/comments/1xvr25/linux_tip_dont_use_kill_9/
+notify-send "Restart the Pale Moon browser for changes to take effect"
