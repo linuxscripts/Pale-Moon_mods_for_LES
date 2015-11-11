@@ -3,6 +3,10 @@
 // https://developer.mozilla.org/en-US/docs/MCD%2C_Mission_Control_Desktop_AKA_AutoConfig#AutoConfig_Directives
 // and https://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/
 
+// Settings were inspired by 
+// http://crunchbang.org/forums/viewtopic.php?id=24722 and
+// http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/ 
+
 // still to do: the about preferences settings below, and the possible byte-shifting with offset 13 ? see
 // https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Automatic_Mozilla_Configurator/Locked_config_settings
 // other things ?
@@ -15,6 +19,23 @@ NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank p
 user_pref("browser.download.lastDir", "??/up_&_downloads");
 
 user_pref("browser.cache.disk.capacity", 89600);
+
+// Disable "slow startup" warnings, disk history, welcomes, intros, EULA, default browser check
+user_pref("browser.slowStartup.notificationDisabled", true);
+user_pref("browser.slowStartup.maxSamples", 0);
+user_pref("browser.slowStartup.samples", 0);
+user_pref("browser.rights.3.shown", true);
+user_pref("browser.startup.homepage_override.mstone", "ignore");
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_override_url", "");
+user_pref("browser.feeds.showFirstRunUI", false);
+user_pref("browser.shell.checkDefaultBrowser", false);
+
+// Disable localization (user prefs):
+user_pref("geo.wifi.uri", "http://127.0.0.1");
+user_pref("browser.search.geoip.url", "");
+user_pref("browser.search.countryCode", "US");
+user_pref("browser.search.region", "US");
 
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
