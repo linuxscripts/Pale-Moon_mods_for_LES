@@ -19,6 +19,27 @@ NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank p
 // Set download directory
 user_pref("browser.download.lastDir", "??/up_&_downloads");
 
+// Enable erasing of form data, passwords on shutdown, keep rest in history though
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.clearOnShutdown.cache", false);
+user_pref("privacy.clearOnShutdown.cookies", false);
+user_pref("privacy.clearOnShutdown.downloads", false);
+user_pref("privacy.clearOnShutdown.formdata", true);
+user_pref("privacy.clearOnShutdown.history", false);
+user_pref("privacy.clearOnShutdown.offlineApps", false);
+user_pref("privacy.clearOnShutdown.passwords", true);
+user_pref("privacy.clearOnShutdown.sessions", true); 
+user_pref("privacy.clearOnShutdown.siteSettings", false);
+user_pref("privacy.cpd.cache", false);
+user_pref("privacy.cpd.cookies", false);
+user_pref("privacy.cpd.downloads", false);
+user_pref("privacy.cpd.formdata", true);
+user_pref("privacy.cpd.history", false);
+user_pref("privacy.cpd.offlineApps", false);
+user_pref("privacy.cpd.passwords", true);
+user_pref("privacy.cpd.sessions", true);
+user_pref("privacy.cpd.siteSettings", false);
+
 // Limit size of downloaded history to 50 MB
 user_pref("browser.cache.disk.capacity", 89600);
 
@@ -43,10 +64,10 @@ user_pref("browser.search.geoip.url", "");
 user_pref("browser.search.countryCode", "US");
 user_pref("browser.search.region", "US");
 
-// Disable browser and plugins auto update
+// Disable browser and plugins auto update, update browser search though
 user_pref("app.update.enabled", false);
 user_pref("app.update.auto", false);
-user_pref("browser.search.update", false);
+user_pref("browser.search.update", true);
 user_pref("extensions.update.enabled", false);
 user_pref("extensions.update.autoUpdateDefault", false);
 user_pref("extensions.getAddons.cache.enabled", false);
