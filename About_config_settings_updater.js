@@ -84,6 +84,26 @@ user_pref("social.remote-install.enabled", false);
 user_pref("social.directories", "");
 user_pref("social.share.activationPanelEnabled", false);
 
+// Disable mozilla's "safebrowsing" and "tracking protection"
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.appRepURL", "");
+user_pref("browser.safebrowsing.gethashURL", "");
+user_pref("browser.safebrowsing.malware.reportURL", "");
+user_pref("browser.safebrowsing.reportErrorURL", "");
+user_pref("browser.safebrowsing.reportGenericURL", "");
+user_pref("browser.safebrowsing.reportMalwareErrorURL", "");
+user_pref("browser.safebrowsing.reportMalwareURL", "");
+user_pref("browser.safebrowsing.reportPhishURL", "");
+user_pref("browser.safebrowsing.reportURL", "");
+user_pref("browser.safebrowsing.updateURL", "");
+user_pref("privacy.trackingprotection.enabled", false);
+user_pref("browser.polaris.enabled", false);
+user_pref("browser.trackingprotection.gethashURL", "");
+user_pref("browser.trackingprotection.getupdateURL", "");
+user_pref("privacy.trackingprotection.pbmode.enabled", false);
+
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
 "Content"->"Fonts & Colors"->"Advanced"->"Serif":"Liberation Sans"
