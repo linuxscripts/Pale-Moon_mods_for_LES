@@ -71,6 +71,18 @@ user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtabpage.enhanced", false);
 user_pref("browser.newtabpage.introShown", true);
 user_pref("browser.aboutHomeSnippets.updateUrl", "https://127.0.0.1");
+user_pref("browser.selfsupport.url", "");
+user_pref("loop.enabled", false);
+user_pref("browser.pocket.enabled", false);
+user_pref("reader.parse-on-load.enabled", false);
+user_pref("browser.pocket.api", "");
+user_pref("browser.pocket.site", "");
+user_pref("social.whitelist", "");
+user_pref("social.toast-notifications.enabled", false);
+user_pref("social.shareDirectory", "");
+user_pref("social.remote-install.enabled", false);
+user_pref("social.directories", "");
+user_pref("social.share.activationPanelEnabled", false);
 
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
