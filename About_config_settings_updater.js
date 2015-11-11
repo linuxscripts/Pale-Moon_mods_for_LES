@@ -16,8 +16,10 @@
 // I don't know the commands for this, can someone help on this about preferences setting section?
 NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank page"
 
+// Set download directory
 user_pref("browser.download.lastDir", "??/up_&_downloads");
 
+// Limit size of downloaded history to 50 MB
 user_pref("browser.cache.disk.capacity", 89600);
 
 // Disable "slow startup" warnings, disk history, welcomes, intros, EULA, default browser check
@@ -30,6 +32,10 @@ user_pref("startup.homepage_welcome_url", "");
 user_pref("startup.homepage_override_url", "");
 user_pref("browser.feeds.showFirstRunUI", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
+
+// Disable useless multimedia things (keeping stats, speech recognision)
+user_pref("media.webspeech.recognition.enable", false);
+user_pref("media.video_stats.enabled", false);
 
 // Disable localization (user prefs):
 user_pref("geo.wifi.uri", "http://127.0.0.1");
@@ -104,11 +110,20 @@ user_pref("browser.trackingprotection.gethashURL", "");
 user_pref("browser.trackingprotection.getupdateURL", "");
 user_pref("privacy.trackingprotection.pbmode.enabled", false);
 
+//Enable donottrack headers
+user_pref("privacy.donottrackheader.enabled", true);
+user_pref("privacy.donottrackheader.value", 1);
+
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
 "Content"->"Fonts & Colors"->"Advanced"->"Serif":"Liberation Sans"
 "Content"->"Fonts & Colors"->"Advanced"->"Sans-serif":"Liberation Sans"
 "Content"->"Fonts & Colors"->"Advanced"->uncheck:"Allow pages to choose their own fonts"
+
+// Disallow sites to choose their own fonts
+user_pref("browser.display.use_document_fonts", 1);
+user_pref("gfx.downloadable_fonts.enabled", true);
+
 "Content"->"Languages"->choose *only*:"en-us" [remove all others, if any]
 "Applications"->choose:"Always ask" for every application - if not possible:choose:"Preview in Firefox/Nightly"
 "Privacy"->"Tracking"->check:"Tell websites I do not want to be tracked"
@@ -130,7 +145,7 @@ If you additionally use Cookie-Monster (Add-on) you need to uncheck "Block all c
 "security"->"Passwords"->uncheck:"Use a master password"
 "advanced"->"General"->"System Defaults"->uncheck:"Submit crash reports"
 "advanced"->"General"->"System Defaults"->uncheck:"Submit performance data"
-NO --> Never install updates --> "advanced"->"Update"->check:"Automatically install updates"
+
 ADDED --> "advanced"-> cached web content: check override automatic cache management; limit cache to 50MB of space 
 "advanced"->"Update"->check:"Warn me if this will disable any of my add-ons"
 "advanced"->"Update"->check:"Automatically update Search Engines"
@@ -165,6 +180,7 @@ lockPref("dom.disable_window_open_feature.toolbar", true);
 lockPref("browser.identity.ssl_domain_display", 1);
 lockPref("browser.urlbar.autocomplete.enabled", false);
 lockPref("browser.urlbar.trimURL", false);
+lockPref("browser.fixup.alternate.enabled", false);
 lockPref("network.http.sendSecureXSiteReferrer", false);
 lockPref("network.http.spdy.enabled", false);
 lockPref("plugins.click_to_play", true);
