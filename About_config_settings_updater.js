@@ -14,7 +14,7 @@ NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank p
 
 user_pref("browser.download.lastDir", "??/up_&_downloads");
 
-user_pref("browser.cache.disk.capacity", 358400);
+user_pref("browser.cache.disk.capacity", 89600);
 
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
