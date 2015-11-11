@@ -12,7 +12,7 @@
 // other things ?
 
 
-// ABOUT:PREFERENCES settings
+// ABOUT:PREFERENCES settings (user_prefs)
 // Change start page to personal (offline) webpage
 user_pref("browser.startup.homepage", "file:///home/*/up_and_downloads/Postinstallation.html");
 
@@ -46,12 +46,16 @@ user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk.smart_size.use_old_max", false);
 
-// Disallow sites to choose their own fonts
+// Disallow sites to choose their own fonts, set Arial as default
 user_pref("browser.display.use_document_fonts", 1);
 user_pref("gfx.downloadable_fonts.enabled", true);
+user_pref("font.name.serif.x-western", "Arial");
 
 // Set browser language to English
 user_pref("intl.accept_languages", "en");
+
+
+// ABOUT:CONFIG settings (user_prefs)
 
 // Disable "slow startup" warnings, disk history, welcomes, intros, EULA, default browser check
 user_pref("browser.slowStartup.notificationDisabled", true);
@@ -141,41 +145,14 @@ user_pref("browser.trackingprotection.gethashURL", "");
 user_pref("browser.trackingprotection.getupdateURL", "");
 user_pref("privacy.trackingprotection.pbmode.enabled", false);
 
-//Enable donottrack headers
+// Enable donottrack headers
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.donottrackheader.value", 1);
 
-"Content"->check:"Block pop-up windows"
-NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
-"Content"->"Fonts & Colors"->"Advanced"->"Serif":"Liberation Sans"
-"Content"->"Fonts & Colors"->"Advanced"->"Sans-serif":"Liberation Sans"
-"Content"->"Fonts & Colors"->"Advanced"->uncheck:"Allow pages to choose their own fonts"
 
+// ABOUT:CONFIG settings (lockPrefs)
 
-
-
-
-
-
-
-"privacy"->"location bar"->"When using the location bar, suggest:"->choose:"Nothing"
-"security"->check:"Warn me when sites try to install add-ons"
-"security"->check:"Block reported attack sites"
-"security"->check:"Block reported web forgeries"
-"security"->"Passwords"->uncheck:"Remember passwords for sites"
-"security"->"Passwords"->uncheck:"Use a master password"
-"advanced"->"General"->"System Defaults"->uncheck:"Submit crash reports"
-"advanced"->"General"->"System Defaults"->uncheck:"Submit performance data"
-
-ADDED --> "advanced"-> cached web content: check override automatic cache management; limit cache to 50MB of space 
-"advanced"->"Update"->check:"Warn me if this will disable any of my add-ons"
-"advanced"->"Update"->check:"Automatically update Search Engines"
-"advanced"->"Encryption"->"Protocols"->check:"Use SSL 3.0"
-"advanced"->"Encryption"->"Protocols"->check:"Use TLS 1.0"
-"advanced"->"Encryption"->"Certificates"->"When a server requests my personal certificate"->check:"Ask me every time"
-
-// ABOUT:CONFIG
-// disable browser cache offline capacity, online history capacity limited, see user pref above:
+// Disable browser cache offline capacity, online history capacity limited, see user pref above:
 lockPref("browser.cache.disk_cache_ssl", false);
 lockPref("browser.cache.offline.enable", false);
 lockPref("browser.cache.disk.smart_size.enabled", false);
@@ -184,13 +161,13 @@ lockPref("browser.cache.offline.capacity:", 0);
 lockPref("dom.indexedDB.enabled", false);
 lockPref("dom.battery.enabled", false);
 
-// disable history & localization:
+// Disable history & localization:
 lockPref("browser.search.suggest.enabled", false);
 lockPref("browser.sessionstore.resume_from_crash", false);
 lockPref("geo.enabled", false);
 lockPref("browser.bookmarks.restore_default_bookmarks", false);
 
-// misc other tweaks:
+// Misc other tweaks:
 lockPref("keyword.enabled", false);
 lockPref("network.dns.disablePrefetch", true);
 lockPref("network.dns.disablePrefetchFromHTTPS", true);
@@ -211,7 +188,7 @@ lockPref("extensions.blocklist.enabled", false);
 lockPref("webgl.disabled", true);
 lockPref("network.websocket.enabled", false);
 
-// make your browsing faster:
+// Make your browsing faster:
 lockPref("network.http.pipelining", true);
 lockPref("network.http.pipelining.ssl", true);
 lockPref("network.http.max-persistent-connections-per-proxy", 0);
