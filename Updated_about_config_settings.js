@@ -1,4 +1,6 @@
-// The following file will update your about:config settings of your browser (firefox and/or pale moon) making it safer
+// This file contains the updated settings for your browser (firefox and/or pale moon), hereby making it faster and safer
+// It is to be copied to palemoon folder by the LES_internet_speed_increase_B.sh script, and will then automatically be used by palemoon
+
 // This file was made after reading http://web.mit.edu/~firefox/www/maintainers/autoconfig.html ,
 // https://developer.mozilla.org/en-US/docs/MCD%2C_Mission_Control_Desktop_AKA_AutoConfig#AutoConfig_Directives
 // and https://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/
