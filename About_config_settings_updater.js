@@ -40,8 +40,11 @@ user_pref("privacy.cpd.passwords", true);
 user_pref("privacy.cpd.sessions", true);
 user_pref("privacy.cpd.siteSettings", false);
 
-// Limit size of downloaded history to 50 MB
-user_pref("browser.cache.disk.capacity", 89600);
+// Disable auto cache management and limit size of downloaded history to 50 MB
+user_pref("browser.cache.disk.capacity", 51200);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+user_pref("browser.cache.disk.smart_size.use_old_max", false);
 
 // Disable "slow startup" warnings, disk history, welcomes, intros, EULA, default browser check
 user_pref("browser.slowStartup.notificationDisabled", true);
