@@ -11,7 +11,9 @@
 // ABOUT:PREFERENCES settings
 // I don't know the commands for this, can someone help on this about preferences setting section?
 NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank page"
-NO --> save files to new folder; up_&_downloads --> "General"->"save files to:"Downloads"
+
+user_pref("browser.download.lastDir", "??/up_&_downloads");
+
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
 "Content"->"Fonts & Colors"->"Advanced"->"Serif":"Liberation Sans"
@@ -24,9 +26,9 @@ NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScrip
 "privacy"->"History"->uncheck:"Always use private browsing mode"
 NO --> remember history--> "privacy"->"History"->uncheck:"Remember my browsing and download history"
 "privacy"->"History"->uncheck:"Remember search and form history"
-NO --> accept cookies --> "privacy"->"History"->uncheck:"Accept cookies from sites"
-NO -->"privacy"->"History"->uncheck:"Accept third-party cookies"
-"privacy"->"History"->check:"Clear history when Firefox/Nightly closes"
+
+
+
 NO, uncheck browsing and download history, and offline websites data -->"privacy"->"History"->"settings":check all -> except:"Site Preferences"
 [to enable cookies for certain trusted sites: use:"Exceptions" and paste URL of site and modify settings according to your preference. 
 If you additionally use Cookie-Monster (Add-on) you need to uncheck "Block all cookies" in CM-Options]
