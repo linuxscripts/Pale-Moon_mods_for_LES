@@ -184,7 +184,7 @@ lockPref("network.http.pipelining.maxrequests", 15);
 lockPref("network.http.redirection-limit", 5);
 lockPref("network.dns.disableIPv6", true);
 lockPref("network.http.fast-fallback-to-IPv4", false);
-lockPref("dom.popup_maximum Mine", 10);
+lockPref("dom.popup_maximum", 10);
 lockPref("network.prefetch-next", false);
 lockPref("browser.backspace_action", 0);
 lockPref("browser.sessionstore.max_tabs_undo", 5);
