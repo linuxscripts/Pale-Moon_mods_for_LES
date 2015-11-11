@@ -19,10 +19,10 @@ user_pref("browser.startup.homepage", "file:///C:/Documents%20and%20Settings/");
 // Set download directory
 user_pref("browser.download.lastDir", "??/up_&_downloads");
 
-// Enable erasing of form data, passwords on shutdown, keep rest in history though
+// Enable erasing of form data, cookies and password data on shutdown, keep rest in history though
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown.cache", false);
-user_pref("privacy.clearOnShutdown.cookies", false);
+user_pref("privacy.clearOnShutdown.cookies", true);
 user_pref("privacy.clearOnShutdown.downloads", false);
 user_pref("privacy.clearOnShutdown.formdata", true);
 user_pref("privacy.clearOnShutdown.history", false);
@@ -31,7 +31,7 @@ user_pref("privacy.clearOnShutdown.passwords", true);
 user_pref("privacy.clearOnShutdown.sessions", true); 
 user_pref("privacy.clearOnShutdown.siteSettings", false);
 user_pref("privacy.cpd.cache", false);
-user_pref("privacy.cpd.cookies", false);
+user_pref("privacy.cpd.cookies", true);
 user_pref("privacy.cpd.downloads", false);
 user_pref("privacy.cpd.formdata", true);
 user_pref("privacy.cpd.history", false);
