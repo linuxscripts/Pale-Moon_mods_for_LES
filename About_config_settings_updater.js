@@ -14,6 +14,8 @@ NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank p
 
 user_pref("browser.download.lastDir", "??/up_&_downloads");
 
+user_pref("browser.cache.disk.capacity", 358400);
+
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
 "Content"->"Fonts & Colors"->"Advanced"->"Serif":"Liberation Sans"
@@ -24,7 +26,7 @@ NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScrip
 "Privacy"->"Tracking"->check:"Tell websites I do not want to be tracked"
 "privacy"->"History"->"Firefox will:"Use custom settings for history"
 "privacy"->"History"->uncheck:"Always use private browsing mode"
-NO --> remember history--> "privacy"->"History"->uncheck:"Remember my browsing and download history"
+
 "privacy"->"History"->uncheck:"Remember search and form history"
 
 
@@ -49,7 +51,7 @@ ADDED --> "advanced"-> cached web content: check override automatic cache manage
 "advanced"->"Encryption"->"Certificates"->"When a server requests my personal certificate"->check:"Ask me every time"
 
 // ABOUT:CONFIG
-// disable browser cache:
+// disable browser cache offline capacity, online history capacity limited, see user pref above:
 lockPref("browser.cache.disk_cache_ssl", false);
 lockPref("browser.cache.offline.enable", false);
 lockPref("browser.cache.disk.smart_size.enabled", false);
