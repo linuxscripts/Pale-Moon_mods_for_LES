@@ -45,9 +45,18 @@ user_pref("extensions.update.enabled", false);
 user_pref("extensions.update.autoUpdateDefault", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("lightweightThemes.update.enabled", false);
+user_pref("plugins.update.notifyUser", false);
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+user_pref("dom.ipc.plugins.reportCrashURL", false);
 
-
-
+// Disable telemetry and health reports
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.server", "");
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("datareporting.healthreport.uploadEnabled",    false);
+user_pref("datareporting.healthreport.documentServerURI", "");
+user_pref("datareporting.healthreport.service.enabled", false);
 
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
