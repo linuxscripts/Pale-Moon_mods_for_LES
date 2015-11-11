@@ -37,6 +37,18 @@ user_pref("browser.search.geoip.url", "");
 user_pref("browser.search.countryCode", "US");
 user_pref("browser.search.region", "US");
 
+// Disable browser and plugins auto update
+user_pref("app.update.enabled", false);
+user_pref("app.update.auto", false);
+user_pref("browser.search.update", false);
+user_pref("extensions.update.enabled", false);
+user_pref("extensions.update.autoUpdateDefault", false);
+user_pref("extensions.getAddons.cache.enabled", false);
+user_pref("lightweightThemes.update.enabled", false);
+
+
+
+
 "Content"->check:"Block pop-up windows"
 NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScript" [optional - NoScript Add-on will block it anyway]
 "Content"->"Fonts & Colors"->"Advanced"->"Serif":"Liberation Sans"
