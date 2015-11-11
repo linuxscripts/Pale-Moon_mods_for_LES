@@ -13,8 +13,8 @@
 
 
 // ABOUT:PREFERENCES settings
-// I don't know the commands for this, can someone help on this about preferences setting section?
-NO --> use saved html page --> "General"->"when Firefox starts"->"Show a blank page"
+// Change start page to personal (offline) webpage
+user_pref("browser.startup.homepage", "file:///C:/Documents%20and%20Settings/");
 
 // Set download directory
 user_pref("browser.download.lastDir", "??/up_&_downloads");
@@ -148,13 +148,7 @@ NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScrip
 user_pref("browser.display.use_document_fonts", 1);
 user_pref("gfx.downloadable_fonts.enabled", true);
 
-"Content"->"Languages"->choose *only*:"en-us" [remove all others, if any]
-"Applications"->choose:"Always ask" for every application - if not possible:choose:"Preview in Firefox/Nightly"
-"Privacy"->"Tracking"->check:"Tell websites I do not want to be tracked"
-"privacy"->"History"->"Firefox will:"Use custom settings for history"
-"privacy"->"History"->uncheck:"Always use private browsing mode"
 
-"privacy"->"History"->uncheck:"Remember search and form history"
 
 
 
