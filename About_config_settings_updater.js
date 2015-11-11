@@ -46,6 +46,13 @@ user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk.smart_size.use_old_max", false);
 
+// Disallow sites to choose their own fonts
+user_pref("browser.display.use_document_fonts", 1);
+user_pref("gfx.downloadable_fonts.enabled", true);
+
+// Set browser language to English
+user_pref("intl.accept_languages", "en");
+
 // Disable "slow startup" warnings, disk history, welcomes, intros, EULA, default browser check
 user_pref("browser.slowStartup.notificationDisabled", true);
 user_pref("browser.slowStartup.maxSamples", 0);
@@ -144,17 +151,13 @@ NO --> (set to click to activate, see mail) "Content"->uncheck:"Enable JavaScrip
 "Content"->"Fonts & Colors"->"Advanced"->"Sans-serif":"Liberation Sans"
 "Content"->"Fonts & Colors"->"Advanced"->uncheck:"Allow pages to choose their own fonts"
 
-// Disallow sites to choose their own fonts
-user_pref("browser.display.use_document_fonts", 1);
-user_pref("gfx.downloadable_fonts.enabled", true);
 
 
 
 
 
-NO, uncheck browsing and download history, and offline websites data -->"privacy"->"History"->"settings":check all -> except:"Site Preferences"
-[to enable cookies for certain trusted sites: use:"Exceptions" and paste URL of site and modify settings according to your preference. 
-If you additionally use Cookie-Monster (Add-on) you need to uncheck "Block all cookies" in CM-Options]
+
+
 "privacy"->"location bar"->"When using the location bar, suggest:"->choose:"Nothing"
 "security"->check:"Warn me when sites try to install add-ons"
 "security"->check:"Block reported attack sites"
