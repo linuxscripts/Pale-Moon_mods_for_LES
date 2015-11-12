@@ -21,7 +21,7 @@ user_pref("browser.startup.homepage", "file:///home/*/up_and_downloads/Postinsta
 // Set download directory
 user_pref("browser.download.lastDir", "file:///home/*/up_and_downloads/");
 
-// Enable erasing of form data, cookies and password data on shutdown, keep rest in history though
+// Erase form data, cookies and password data on shutdown, keep rest in history however
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown.cache", false);
 user_pref("privacy.clearOnShutdown.cookies", true);
@@ -41,6 +41,9 @@ user_pref("privacy.cpd.offlineApps", false);
 user_pref("privacy.cpd.passwords", true);
 user_pref("privacy.cpd.sessions", true);
 user_pref("privacy.cpd.siteSettings", false);
+
+// Make all webcontent requiring a plugin (i.e. Java, Flash, Silverlight, Adobe Reader, QuickTime) click to play
+user_pref("plugins.click_to_play", true);
 
 // Disable auto cache management and limit size of downloaded history to 50 MB
 user_pref("browser.cache.disk.capacity", 51200);
