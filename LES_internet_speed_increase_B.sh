@@ -7,6 +7,7 @@
 
 #This script will
 #Install Pale Moon (version that is known to work; current version from folder; note that it also doubles as pdf reader so no standalone pdf reader -like ePDFView- is needed to be installed any more)
+#Copy the modified preferences file to the palemoon folder so it uses these modified settings rather than the standard settings
 #Install Flash player
 #Install Pale Moon plugins (from the files_internet_speed_increase_scripts/palemoon_plugins/ folder, including: SSL search bar, Calomel SSL Validation, Encrypted Web, User agent overrider, Noscript, uBlock Origin, Disconnect); note that Disconnect is deactivated by default (as uBlock Origin will all ready block most Disconnect blocks anyway -Disconnect just offers the benefit of showing what's blocked in detail-), Flash is blocked by Noscript too btw, and has been set in the preferences config to not automatically run; however if Noscript is disabled temporarily, and thus flash allowed to run, the browser can still show flash animations. For the ssl search bars: Duckduckgo, ixquick and Google are made available. For the user agent overrider, see the html page.
 #Copy the Post-installation instructions html to the /home/<username>/Downloads folder
