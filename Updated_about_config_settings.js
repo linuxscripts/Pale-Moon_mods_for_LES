@@ -16,7 +16,7 @@ pref('general.config.obscure_value', 0);
 // ABOUT:PREFERENCES and ABOUT:CONFIG settings
 
 // Change start page to personal (offline) webpage; note that this can only be set with a complex preference, see https://mike.kaply.com/2012/08/29/setting-the-default-firefox-homepage-with-autoconfig/
-defaultPref("browser.startup.homepage", "data:text/plain,browser.startup.homepage=file:///home/tux/up_and_downloads/Postinstallation.html")
+defaultPref("browser.startup.homepage", "data:text/plain,browser.startup.homepage=file:///home/*/up_and_downloads/Postinstallation.html")
 defaultPref("startup.homepage_welcome_url", "");
 defaultPref("startup.homepage_override_url", "");
 defaultPref("browser.startup.homepage_override.mstone", "ignore");
