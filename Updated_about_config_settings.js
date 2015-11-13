@@ -16,6 +16,8 @@ pref('general.config.obscure_value', 0);
 // ABOUT:PREFERENCES settings
 // Change start page to personal (offline) webpage; note that this can only be set with a complex preference, see https://mike.kaply.com/2012/08/29/setting-the-default-firefox-homepage-with-autoconfig/
 defaultPref("browser.startup.homepage", "data:text/plain,browser.startup.homepage=file:///home/*/up_and_downloads/Postinstallation.html")
+defaultPref("startup.homepage_welcome_url", "");
+defaultPref("startup.homepage_override_url", "");
 
 // Set download directory
 defaultPref("browser.download.lastDir", "file:///home/*/up_and_downloads/");
@@ -40,6 +42,15 @@ defaultPref("privacy.cpd.offlineApps", false);
 defaultPref("privacy.cpd.passwords", true);
 defaultPref("privacy.cpd.sessions", true);
 defaultPref("privacy.cpd.siteSettings", false);
+
+// Disable browser cache offline capacity, online history capacity limited, see user pref above:
+defaultPref("browser.cache.disk_cache_ssl", false);
+defaultPref("browser.cache.offline.enable", false);
+defaultPref("browser.cache.disk.smart_size.enabled", false);
+defaultPref("browser.cache.disk.smart_size.first_run", false);
+defaultPref("browser.cache.offline.capacity:", 0);
+defaultPref("dom.indexedDB.enabled", false);
+defaultPref("dom.battery.enabled", false);
 
 // Make all webcontent requiring a plugin (i.e. Java, Flash, Silverlight, Adobe Reader, QuickTime) click to play
 defaultPref("plugins.click_to_play", true);
@@ -67,8 +78,6 @@ defaultPref("browser.slowStartup.maxSamples", 0);
 defaultPref("browser.slowStartup.samples", 0);
 defaultPref("browser.rights.3.shown", true);
 defaultPref("browser.startup.homepage_override.mstone", "ignore");
-defaultPref("startup.homepage_welcome_url", "");
-defaultPref("startup.homepage_override_url", "");
 defaultPref("browser.feeds.showFirstRunUI", false);
 defaultPref("browser.shell.checkDefaultBrowser", false);
 
@@ -76,11 +85,19 @@ defaultPref("browser.shell.checkDefaultBrowser", false);
 defaultPref("media.webspeech.recognition.enable", false);
 defaultPref("media.video_stats.enabled", false);
 
-// Disable localization (user prefs):
+// Disable localization:
 defaultPref("geo.wifi.uri", "http://127.0.0.1");
+defaultPref("geo.enabled", false);
 defaultPref("browser.search.geoip.url", "");
 defaultPref("browser.search.countryCode", "US");
 defaultPref("browser.search.region", "US");
+
+// Disable some of the history:
+defaultPref("browser.search.suggest.enabled", false);
+defaultPref("browser.sessionstore.resume_from_crash", false);
+defaultPref("browser.bookmarks.restore_default_bookmarks", false);
+defaultPref("browser.pagethumbnails.capturing_disabled", true);
+defaultPref("pageThumbs.enabled", false);
 
 // Disable browser and plugins auto update, update browser search though
 defaultPref("app.update.enabled", false);
@@ -129,7 +146,7 @@ defaultPref("social.remote-install.enabled", false);
 defaultPref("social.directories", "");
 defaultPref("social.share.activationPanelEnabled", false);
 
-// Disable mozilla's "safebrowsing" and "tracking protection"
+// Disable mozilla's "safebrowsing" and "tracking protection", add additional security
 defaultPref("browser.safebrowsing.malware.enabled", false);
 defaultPref("browser.safebrowsing.downloads.enabled", false);
 defaultPref("browser.safebrowsing.downloads.remote.enabled", false);
@@ -148,26 +165,13 @@ defaultPref("browser.polaris.enabled", false);
 defaultPref("browser.trackingprotection.gethashURL", "");
 defaultPref("browser.trackingprotection.getupdateURL", "");
 defaultPref("privacy.trackingprotection.pbmode.enabled", false);
+defaultPref("beacon.enabled", false);
 
 // Enable donottrack headers
 defaultPref("privacy.donottrackheader.enabled", true);
 defaultPref("privacy.donottrackheader.value", 1);
 
 
-// Disable browser cache offline capacity, online history capacity limited, see user pref above:
-defaultPref("browser.cache.disk_cache_ssl", false);
-defaultPref("browser.cache.offline.enable", false);
-defaultPref("browser.cache.disk.smart_size.enabled", false);
-defaultPref("browser.cache.disk.smart_size.first_run", false);
-defaultPref("browser.cache.offline.capacity:", 0);
-defaultPref("dom.indexedDB.enabled", false);
-defaultPref("dom.battery.enabled", false);
-
-// Disable history & localization:
-defaultPref("browser.search.suggest.enabled", false);
-defaultPref("browser.sessionstore.resume_from_crash", false);
-defaultPref("geo.enabled", false);
-defaultPref("browser.bookmarks.restore_default_bookmarks", false);
 
 // Misc other tweaks:
 defaultPref("keyword.enabled", false);
@@ -183,6 +187,7 @@ defaultPref("browser.urlbar.trimURL", false);
 defaultPref("browser.fixup.alternate.enabled", false);
 defaultPref("network.http.sendSecureXSiteReferrer", false);
 defaultPref("network.http.spdy.enabled", false);
+defaultPref("network.http.spdy.enabled.v3-1", false);
 defaultPref("plugins.click_to_play", true);
 defaultPref("security.enable_tls_session_tickets", false);
 defaultPref("security.ssl.enable_false_start", true);
