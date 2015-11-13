@@ -19,6 +19,7 @@ pref('general.config.obscure_value', 0);
 defaultPref("browser.startup.homepage", "data:text/plain,browser.startup.homepage=file:///home/*/up_and_downloads/Postinstallation.html")
 defaultPref("startup.homepage_welcome_url", "");
 defaultPref("startup.homepage_override_url", "");
+defaultPref("browser.startup.homepage_override.mstone", "ignore");
 
 // Set browser language to English
 defaultPref("intl.accept_languages", "en");
@@ -153,7 +154,6 @@ defaultPref("browser.slowStartup.notificationDisabled", true);
 defaultPref("browser.slowStartup.maxSamples", 0);
 defaultPref("browser.slowStartup.samples", 0);
 defaultPref("browser.rights.3.shown", true);
-defaultPref("browser.startup.homepage_override.mstone", "ignore");
 defaultPref("browser.feeds.showFirstRunUI", false);
 defaultPref("browser.shell.checkDefaultBrowser", false);
 
