@@ -96,6 +96,7 @@ defaultPref("signon.autofillForms", false);
 defaultPref("keyword.enabled", false);
 defaultPref("network.dns.disablePrefetch", true);
 defaultPref("network.dns.disablePrefetchFromHTTPS", true);
+defaultPref("network.websocket.enabled", false);
 defaultPref("dom.disable_window_open_feature.menubar", true);
 defaultPref("dom.disable_window_open_feature.personalbar", true);
 defaultPref("dom.disable_window_open_feature.scrollbars", true);
@@ -104,11 +105,13 @@ defaultPref("browser.identity.ssl_domain_display", 1);
 defaultPref("network.http.sendSecureXSiteReferrer", false);
 defaultPref("network.http.spdy.enabled", false);
 defaultPref("network.http.spdy.enabled.v3-1", false);
+defaultPref("security.ssl.enable_ocsp_stapling", true);
+defaultPref("security.OCSP.require", false);
+defaultPref("security.OCSP.enabled", 1);
 defaultPref("security.enable_tls_session_tickets", false);
 defaultPref("security.ssl.enable_false_start", true);
 defaultPref("extensions.blocklist.enabled", false);
 defaultPref("webgl.disabled", true);
-defaultPref("network.websocket.enabled", false);
 
 // Make all webcontent requiring a plugin (i.e. Java, Flash, Silverlight, Adobe Reader, QuickTime) click to play
 defaultPref("plugins.click_to_play", true);
