@@ -9,34 +9,33 @@
 // http://crunchbang.org/forums/viewtopic.php?id=24722 and
 // http://www.ghacks.net/2015/08/18/a-comprehensive-list-of-firefox-privacy-and-security-settings/ 
 
-// still to do: the about preferences settings below, and the possible byte-shifting with offset 13 ? see
-// https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Automatic_Mozilla_Configurator/Locked_config_settings
-// other things ?
+// Turn off obfuscation (no longer needing byte-shifting with offset 13, see https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Automatic_Mozilla_Configurator/Locked_config_settings )
+pref('general.config.obscure_value', 0);
 
 
-// ABOUT:PREFERENCES settings (user_prefs)
-// Change start page to personal (offline) webpage
-user_pref("browser.startup.homepage", "file:///home/*/up_and_downloads/Postinstallation.html");
+// ABOUT:PREFERENCES settings
+// Change start page to personal (offline) webpage; note that this can only be set with a complex preference, see https://mike.kaply.com/2012/08/29/setting-the-default-firefox-homepage-with-autoconfig/
+defaultPref("browser.startup.homepage", "data:text/plain,browser.startup.homepage=file:///home/*/up_and_downloads/Postinstallation.html")
 
 // Set download directory
-user_pref("browser.download.lastDir", "file:///home/*/up_and_downloads/");
+defaultPref("browser.download.lastDir", "file:///home/*/up_and_downloads/");
 
 // Erase form data, cookies and password data on shutdown, keep rest in history however
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
-user_pref("privacy.clearOnShutdown.cache", false);
-user_pref("privacy.clearOnShutdown.cookies", true);
-user_pref("privacy.clearOnShutdown.downloads", false);
-user_pref("privacy.clearOnShutdown.formdata", true);
-user_pref("privacy.clearOnShutdown.history", false);
-user_pref("privacy.clearOnShutdown.offlineApps", false);
-user_pref("privacy.clearOnShutdown.passwords", true);
-user_pref("privacy.clearOnShutdown.sessions", true); 
-user_pref("privacy.clearOnShutdown.siteSettings", false);
-user_pref("privacy.cpd.cache", false);
-user_pref("privacy.cpd.cookies", true);
-user_pref("privacy.cpd.downloads", false);
-user_pref("privacy.cpd.formdata", true);
-user_pref("privacy.cpd.history", false);
+defaultPref("privacy.sanitize.sanitizeOnShutdown", true);
+defaultPref("privacy.clearOnShutdown.cache", false);
+defaultPref("privacy.clearOnShutdown.cookies", true);
+defaultPref("privacy.clearOnShutdown.downloads", false);
+defaultPref("privacy.clearOnShutdown.formdata", true);
+defaultPref("privacy.clearOnShutdown.history", false);
+defaultPref("privacy.clearOnShutdown.offlineApps", false);
+defaultPref("privacy.clearOnShutdown.passwords", true);
+defaultPref("privacy.clearOnShutdown.sessions", true); 
+defaultPref("privacy.clearOnShutdown.siteSettings", false);
+defaultPref("privacy.cpd.cache", false);
+defaultPref("privacy.cpd.cookies", true);
+defaultPref("privacy.cpd.downloads", false);
+defaultPref("privacy.cpd.formdata", true);
+defaultPref("privacy.cpd.history", false);
 user_pref("privacy.cpd.offlineApps", false);
 user_pref("privacy.cpd.passwords", true);
 user_pref("privacy.cpd.sessions", true);
@@ -60,7 +59,7 @@ user_pref("font.name.serif.x-western", "Arial");
 user_pref("intl.accept_languages", "en");
 
 
-// ABOUT:CONFIG settings (user_prefs)
+// ABOUT:CONFIG settings
 
 // Disable "slow startup" warnings, disk history, welcomes, intros, EULA, default browser check
 user_pref("browser.slowStartup.notificationDisabled", true);
@@ -154,8 +153,6 @@ user_pref("privacy.trackingprotection.pbmode.enabled", false);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.donottrackheader.value", 1);
 
-
-// ABOUT:CONFIG settings (lockPrefs)
 
 // Disable browser cache offline capacity, online history capacity limited, see user pref above:
 lockPref("browser.cache.disk_cache_ssl", false);
