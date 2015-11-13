@@ -81,7 +81,17 @@ defaultPref("browser.search.geoip.url", "");
 defaultPref("browser.search.countryCode", "US");
 defaultPref("browser.search.region", "US");
 
-// Some privacy and security tweaks:
+// Some privacy and security restrictions, while keeping some convenience for the user:
+defaultPref("browser.urlbar.autoFill", true);
+defaultPref("browser.urlbar.autoFill.typed", true);
+defaultPref("browser.urlbar.autocomplete.enabled", true);
+defaultPref("browser.search.suggest.enabled", true);
+defaultPref("browser.urlbar.suggest.history", true);
+defaultPref("browser.urlbar.suggest.searches", false);
+defaultPref("browser.urlbar.userMadeSearchSuggestionsChoice", true);
+defaultPref("browser.urlbar.trimURL", false);
+defaultPref("browser.fixup.alternate.enabled", false);
+defaultPref("signon.autofillForms", false);
 defaultPref("keyword.enabled", false);
 defaultPref("network.dns.disablePrefetch", true);
 defaultPref("network.dns.disablePrefetchFromHTTPS", true);
@@ -90,13 +100,9 @@ defaultPref("dom.disable_window_open_feature.personalbar", true);
 defaultPref("dom.disable_window_open_feature.scrollbars", true);
 defaultPref("dom.disable_window_open_feature.toolbar", true);
 defaultPref("browser.identity.ssl_domain_display", 1);
-defaultPref("browser.urlbar.autocomplete.enabled", false);
-defaultPref("browser.urlbar.trimURL", false);
-defaultPref("browser.fixup.alternate.enabled", false);
 defaultPref("network.http.sendSecureXSiteReferrer", false);
 defaultPref("network.http.spdy.enabled", false);
 defaultPref("network.http.spdy.enabled.v3-1", false);
-defaultPref("plugins.click_to_play", true);
 defaultPref("security.enable_tls_session_tickets", false);
 defaultPref("security.ssl.enable_false_start", true);
 defaultPref("extensions.blocklist.enabled", false);
@@ -150,6 +156,12 @@ defaultPref("browser.rights.3.shown", true);
 defaultPref("browser.startup.homepage_override.mstone", "ignore");
 defaultPref("browser.feeds.showFirstRunUI", false);
 defaultPref("browser.shell.checkDefaultBrowser", false);
+
+// Disable annoying warnings, ...
+defaultPref("general.warnOnAboutConfig", false);
+defaultPref("browser.tabs.warnOnClose", false);
+defaultPref("browser.tabs.warnOnCloseOtherTabs", false);
+defaultPref("browser.tabs.warnOnOpen", false);
 
 // Disable useless multimedia things (keeping stats, speech recognision)
 defaultPref("media.webspeech.recognition.enable", false);
