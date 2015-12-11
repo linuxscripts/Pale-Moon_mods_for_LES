@@ -41,9 +41,10 @@ cd ~/files_internet_speed_increase_scripts/firefox_dependencies/pango-1.36.8/
 make
 make install
 
-#Copy the modified preferences file to the palemoon folder so it uses these modified settings rather than the standard settings, see https://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/
+#Copy the modified preferences files to the palemoon folder so it uses these modified settings rather than the standard settings, see https://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/
 cd ~/files_internet_speed_increase_scripts/palemoon_updated_settings/
-cp Updated_about_config_settings.js /usr/local/palemoon/defaults/pref/
+cp Updated_about_config_settings.cfg /palemoon
+cp autoconfig.js /usr/local/palemoon/defaults/pref/
 
 #Install Flash player; see https://helpx.adobe.com/flash-player/release-note/readme-flash-player-linux.html
 cd ~/files_internet_speed_increase_scripts/flashplayer11-2-202460-targz/
