@@ -43,7 +43,7 @@ make install
 
 #Copy the modified preferences files to the palemoon folder so it uses these modified settings rather than the standard settings, see https://mike.kaply.com/2012/03/15/customizing-firefox-default-preference-files/
 cd ~/files_internet_speed_increase_scripts/palemoon_updated_settings/
-cp Updated_about_config_settings.cfg /palemoon
+cp Updated_about_config_settings.cfg /usr/local/palemoon
 cp autoconfig.js /usr/local/palemoon/defaults/pref/
 
 #Install Flash player; see https://helpx.adobe.com/flash-player/release-note/readme-flash-player-linux.html
