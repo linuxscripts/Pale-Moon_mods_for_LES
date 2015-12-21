@@ -79,7 +79,7 @@ cp user_agent_overrider-0.2.5-fx.xpi /usr/local/palemoon/browser/extensions/
 
 #Copy the Post-installation instructions html to the /home/<username>/up_and_downloads/ folder; note that the post-installation instructions html will also be your made your startpage by the updated files handling the Preferences and about:config in Firefox
 cd ~/files_other/
-cp Postinstallation.html /home/*/up_and_downloads/Postinstallation.html
+cp Postinstallation.html /home/*/up_and_downloads/
 
 #Display messagebox that the Pale Moon browser needs to be restarted before changes take effect (see http://stackoverflow.com/questions/7035/how-to-show-a-message-box-from-a-bash-script-in-linux). Note that a standard kill9 hasn't been used since that doesn't allow to shut down any program cleanly, see https://www.reddit.com/r/linux/comments/1xvr25/linux_tip_dont_use_kill_9/
 notify-send "Restart the Pale Moon browser for changes to take effect"
